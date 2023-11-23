@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه 13</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <!-- <link rel="stylesheet" href="assets/css/hover.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/imagehover.css"> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    Hover Effect Ideas
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+  </head>
+  <style>
+[class^='imghvr-'], [class*=' imghvr-'] {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    max-width: 100%;
+    background-color: #2266a5;
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+[class^='imghvr-'] > img, [class*=' imghvr-'] > img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+[class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
+    background-color: #135796;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+[class^='imghvr-'] figcaption h1, [class^='imghvr-'] figcaption h2, [class^='imghvr-'] figcaption h3, [class^='imghvr-'] figcaption h4, [class^='imghvr-'] figcaption h5, [class^='imghvr-'] figcaption h6, [class*=' imghvr-'] figcaption h1, [class*=' imghvr-'] figcaption h2, [class*=' imghvr-'] figcaption h3, [class*=' imghvr-'] figcaption h4, [class*=' imghvr-'] figcaption h5, [class*=' imghvr-'] figcaption h6 {
+    color: #ffffff;
+}
+
+[class^='imghvr-'] a, [class*=' imghvr-'] a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+[class^='imghvr-'], [class*=' imghvr-'], [class^='imghvr-']:before,
+[class^='imghvr-']:after, [class*=' imghvr-']:before, [class*=' imghvr-']:after,
+[class^='imghvr-'] *, [class*=' imghvr-'] *, [class^='imghvr-'] *:before,
+[class^='imghvr-'] *:after, [class*=' imghvr-'] *:before, [class*=' imghvr-'] *:after {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+/* imghvr-fade-*
+   ----------------------------- */
+   [class^='imghvr-fade'] figcaption, [class*=' imghvr-fade'] figcaption {
+    opacity: 0;
+}
+
+[class^='imghvr-fade']:hover figcaption, [class*=' imghvr-fade']:hover figcaption {
+    opacity: 1;
+}
+
+[class^='imghvr-fade']:hover > img, [class^='imghvr-fade']:hover figcaption, [class*=' imghvr-fade']:hover > img, [class*=' imghvr-fade']:hover figcaption {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+/* imghvr-fade
+   ----------------------------- */
+
+
+    figure img{
+      width: 100%;
+      height:auto ;
+      display: inline-block;
+
+    }
+    .container{
+      margin-top: 300px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .card{
+      border: 1px solid #efefef;
+      padding: 10px;
+      max-width: 500px;
+    }
+    [class^='imghvr-'],
+[class*=' imghvr-'] {
+  background-color: #33d19c!important;
+}
+  </style>
+  <body>
+   <div class="container">
+    <div class="card">
+      <figure class="imghvr-shutter-out-diag-1" style="background-color:#6233d1;">
+        <img src="assets/img/a3.jpg">
+        <figcaption>
+          // Hover Content
+        </figcaption>
+      </figure>
+      <a href="">جلسه اول طراحی وب</a>
+      <p>در این جلسه می پردازیم به معرفی مبحث طراحی وب</p>
+     </div>
+     <div class="card">
+      <figure class="imghvr-fade" style="background-color:#D14233;">
+        <img src="assets/img/a2.jpg">
+        <figcaption>
+          <p>در این جلسه می پردازیم به معرفی مبحث طراحی وب</p>
+          <a class="" href="#">ادامه مطلب...</a>
+        </figcaption>
+      </figure>
+      <a href="">جلسه اول طراحی وب</a>
+      <p>در این جلسه می پردازیم به معرفی مبحث طراحی وب</p>
+     </div>
+     <div class="card">
+      <figure class="imghvr-zoom-out-up" style="background-color:#D14233;">
+        <img src="assets/img/a1.png">
+        <figcaption>
+          // Hover Content
+        </figcaption>
+      
+      </figure>
+      <a href="">جلسه اول طراحی وب</a>
+      <p>در این جلسه می پردازیم به معرفی مبحث طراحی وب</p>
+     </div>
+   </div>
+ </body>
+</html>

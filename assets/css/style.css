@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Vazir-Medium;
+  src: url(../fonts/Vazir-Medium.eot) format("eot"),
+    url(../fonts/Vazir-Medium.woff) format("woff"),
+    url(../fonts/Vazir-Medium.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  font-family: iransans;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* *,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Vazir-Medium;
+  
+}
+body {
+  direction: rtl;
+}
+
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} */
+a {
+  text-decoration: none;
+}
+/* Bounce To Bottom */
+
+
+
+/* Margin mixin */
+@mixin margin-all($top, $right, $bottom, $left)
+{ margin-top: $top;
+margin-right: $right;
+margin-bottom: $bottom;
+margin-left: $left; };
+
+/* Btn mixin */
+@mixin link-btn ($padding, $margin) {
+padding: $padding;
+@include margin-all($margin);
+}
