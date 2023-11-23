@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه 5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #d8e0e5;
+      }
+      .course-title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        padding: 100px;
+        font-size: 34px;
+      }
+      #slideshow-wrap {
+        display: block;
+        height: 320px;
+        min-width: 260px;
+        max-width: 640px;
+        margin: auto;
+        border: 12px solid #f7f5f5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        margin-top: 20px;
+        position: relative;
+      }
+      #slideshow-inner {
+        width: 100%;
+        height: 100%;
+        /* background-color: #000; */
+        overflow: hidden;
+        position: relative;
+      }
+      #slideshow-inner ul {
+        list-style: none;
+        height: 100%;
+        width: 500%;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        transition: left 0.8s ease;
+      }
+      #slideshow-inner ul > li {
+        width: 20%;
+        height: 320px;
+        float: left;
+        position: relative;
+      }
+      #slideshow-inner ul > li > img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+       
+        display: block;
+      }
+
+      #slideshow-wrap label:not(.show-description-label) {
+        position: absolute;
+        left: 50%;
+        bottom: -45px;
+        width: 12px;
+        height: 12px;
+        z-index: 100;
+        background-color: rgba(200, 200, 200, 1);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 3px (0, 0, 0, 0.8);
+        transition: background-color 0.2s;
+      }
+      #slideshow-wrap label:active {
+        bottom: -46px;
+      }
+      #slideshow-wrap label[for="button-1"] {
+        margin-left: -36px;
+      }
+      #slideshow-wrap label[for="button-2"] {
+        margin-left: -18px;
+      }
+      #slideshow-wrap #button-1:checked ~ #slideshow-inner > ul {
+        left: 0;
+      }
+      #slideshow-wrap #button-2:checked ~ #slideshow-inner > ul {
+        left: -100%;
+      }
+      #slideshow-wrap #button-3:checked ~ #slideshow-inner > ul {
+        left: -200%;
+      }
+
+      #slideshow-wrap #button-1:checked ~ label[for="button-1"],
+      #slideshow-wrap #button-2:checked ~ label[for="button-2"],
+      #slideshow-wrap #button-3:checked ~ label[for="button-3"] {
+        background-color: rgb(90, 89, 89);
+      }
+      #slideshow-wrap input[type=radio]{
+        position: absolute;
+        display: none;
+      }
+
+      .description{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 260px;
+        z-index: 1000;
+      }
+      .description input{
+        visibility: hidden;
+      }
+      .description label{
+        background-color: rgba(255,255,255,1);
+        position: relative;
+        left: -19px;
+        top: 0;
+        width: 40px;
+        height: 26px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        color: #585858;
+        border-radius: 0 0 15px 0;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity .2s ease;
+      }
+      #slideshow-wrap #slideshow-inner:hover .description label{
+        opacity: 1;
+      }
+      #slideshow-wrap #slideshow-inner input[type=checkbox]:checked ~ label{
+        opacity: 1;
+      }
+      #slideshow-wrap #slideshow-inner .description .description-text{
+        position: relative;
+        top: -35px;
+        background:rgba(255,255,255,.5);
+        text-align: center;
+        color: rgb(65, 65, 65);
+        z-index: 4;
+        opacity: 0;
+        transition: opacity .2s;
+        padding: 10px;
+      }
+      #slideshow-wrap #slideshow-inner .description .description-text h2 {
+        font-size: 22px;
+      }
+      #slideshow-wrap #slideshow-inner .description .description-text p {
+        font-size: 18px;
+      }
+      #slideshow-wrap #slideshow-inner .description input:checked ~ .description-text {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="course-title">دوره طراحی وب</p>
+    <div id="slideshow-wrap">
+      <input type="radio" id="button-1" name="controls" checked="checked" />
+      <label for="button-1"></label>
+      <input type="radio" id="button-2" name="controls" />
+      <label for="button-2"></label>
+      <input type="radio" id="button-3" name="controls" />
+      <label for="button-3"></label>
+      <div id="slideshow-inner">
+        <ul>
+          <li id="slide1">
+            <img src="assets/img/a1.png" alt="" />
+            <div class="description">
+              <input type="checkbox" id="show-description-1" />
+              <label for="show-description-1" class="show-description-label">
+                <i class="material-icons">more_horiz</i>
+              </label>
+              <div class="description-text">
+                <h2>1طراحی وب</h2>
+                <p>1دوره طراحی وب</p>
+              </div>
+            </div>
+          </li>
+          <li id="slide2">
+            <img src="assets/img/a2.jpg" alt="" />
+            <div class="description">
+              <input type="checkbox" id="show-description-2" />
+              <label for="show-description-2" class="show-description-label">
+                <i class="material-icons">more_horiz</i>
+              </label>
+              <div class="description-text">
+                <h2>2طراحی وب</h2>
+                <p>2دوره طراحی وب</p>
+              </div>
+            </div>
+          </li>
+          <li id="slide3">
+            <img src="assets/img/a3.jpg" alt="" />
+            <div class="description">
+              <input type="checkbox" id="show-description-3" />
+              <label for="show-description-3" class="show-description-label">
+                <i class="material-icons">more_horiz</i>
+              </label>
+              <div class="description-text">
+                <h2>3طراحی وب</h2>
+                <p>3دوره طراحی وب</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

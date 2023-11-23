@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه 4</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        transition: 0.2s ease-in;
+      }
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      #page-content p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 34px;
+        font-weight: bold;
+      }
+      #drawer-toggle-label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 13px;
+        width: 24px;
+        height: 2px;
+        box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d, 0 18px 0 #8d8d8d;
+      }
+      #drawer-toggle-label {
+        display: block;
+        height: 30px;
+        width: 30px;
+        position: fixed;
+        left: 0;
+        cursor: pointer;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0);
+      }
+      #drawer-toggle {
+        position: absolute;
+        opacity: 0;
+      }
+      header {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        background: #efefef;
+        font-size: 30px;
+        padding: 10px 10px 10px 50px;
+        line-height: 30px;
+        z-index: 0;
+      }
+      nav#slide-nav {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        background: #2f2f2f;
+        height: 100%;
+        width: 300px;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /* overflow: hidden; */
+        padding: 20px;
+      }
+      ul#drawer li {
+        list-style: none;
+        text-align: right;
+        margin: 20px 0;
+      }
+      ul#drawer li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #drawer-toggle:checked ~ nav#slide-nav {
+        left: 0px;
+      }
+      #drawer-toggle:checked ~ label#drawer-toggle-label,
+      #drawer-toggle:checked ~ header {
+        left: 300px;
+      }
+      #drawer-toggle:checked ~ #page-content {
+        margin-left: 300px;
+      }
+
+      #page-content {
+        margin-top: 90px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #drawer-toggle:checked ~ #drawer-toggle-label {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+      }
+      #drawer-toggle:checked ~ #page-content {
+        width: calc(100% - 300px);
+        /* width: 100%; */
+      }
+      #page-content div {
+        margin: 0 10px;
+        border: 1px solid #efefef;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="drawer-toggle" />
+    <label for="drawer-toggle" id="drawer-toggle-label"></label>
+    <header>web design</header>
+    <nav id="slide-nav">
+      <ul id="drawer">
+        <li><a href="">خانه</a></li>
+        <li><a href="">دوره های آموزشی</a></li>
+        <li><a href="">تماس با ما</a></li>
+        <li><a href="">درباره ما</a></li>
+      </ul>
+    </nav>
+    <div id="page-content">
+      <div>
+        <a href="#"> ادامه مطلب</a>
+        <span>دوره آموزش طراحی وب</span>
+      </div>
+      <div>
+        <a href="#"> ادامه مطلب</a>
+        <span>دوره آموزش طراحی وب</span>
+      </div>
+      <div>
+        <a href="#"> ادامه مطلب</a>
+        <span>دوره آموزش طراحی وب</span>
+      </div>
+    </div>
+  </body>
+</html>

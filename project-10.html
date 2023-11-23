@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه 10</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body {
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        color: #fff;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        /* background-color: deeppink; */
+        position: relative;
+        /* display: flex;
+      align-items: center; */
+      }
+      .container form {
+        text-align: center;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        justify-content: center;
+       
+      }
+      .container form input {
+        height: 0;
+        margin: 12px 0;
+        z-index: 12;
+      }
+      .container form input:checked {
+        outline: 0;
+        border: 0;
+      }
+      .container form input::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 11px;
+        cursor: pointer;
+        transition: background-color 0.25s linear;
+      }
+      .container form input:checked::before {
+        background-color: #fff;
+      }
+
+      .container form input::after {
+        content: "" attr(title) "";
+        position: relative;
+        top: -5px;
+        left: 30px;
+        opacity: 0;
+        display: block;
+        min-width: 120px;
+        font-size: 14px;
+        transition: opacity 0.25s linear, left 0.25s linear;
+        color: #fff;
+        font-weight: bold;
+      }
+      .container form input:checked::after {
+        opacity: 1;
+        left: 20px;
+      }
+      .container form input::after:not(label) {
+        opacity: 1;
+      }
+      .container form input:nth-of-type(1):checked ~ .labels label {
+        transform: translateY(-0%);
+      }
+      .container form input:nth-of-type(2):checked ~ .labels label {
+        transform: translateY(-100%);
+      }
+      .container form input:nth-of-type(3):checked ~ .labels label {
+        transform: translateY(-200%);
+      }
+      .container form input:nth-of-type(4):checked ~ .labels label {
+        transform: translateY(-300%);
+      }
+      .container form input:nth-of-type(5):checked ~ .labels label {
+        transform: translateY(-400%);
+      }
+      .container form .labels {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .container form .labels label {
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2b2b2b;
+        transition: transform 0.75s cubic-bezier(0.75, 0.25, 0, 1);
+      }
+      .container form .labels label:nth-child(odd) {
+        background-color: #f5004a;
+      }
+      .icon {
+        position: absolute;
+        bottom: 30px;
+        font-size: 26px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input
+          type="radio"
+          id="slide1"
+          name="slide"
+          title="خانه"
+          checked="checked"
+        />
+        <input type="radio" id="slide2" name="slide" autofocus="autofocus" title="پروژه ها" />
+        <input type="radio" id="slide3" name="slide" title="مباحث آموزشی" />
+        <input type="radio" id="slide4" name="slide" title="ابزارها" />
+        <input type="radio" id="slide5" name="slide" title="درباره ما" />
+        <div class="labels">
+          <label for="slide1" id="slide1">
+            <div class="content">
+              <h1>پروژه شماره 10</h1>
+              <div class="icon">
+                از کیبورد برای حرکت اسلایدها می توانید استفاده کنید
+              </div>
+            </div>
+          </label>
+          <label for="slide2" id="slide2">
+            <div class="content">
+              <h1>پروژه های کاربردی</h1>
+            </div>
+          </label>
+          <label for="slide3" id="slide3">
+            <div class="content">
+              <h1>آموزش بروزترین مباحث front-end</h1>
+            </div>
+          </label>
+          <label for="slide4" id="slide4">
+            <div class="content">
+              <h1>بررسی ابزارها و تکنولوژی های روز</h1>
+              <div class="icon">
+                از کیبورد برای حرکت اسلایدها می توانید استفاده کنید
+              </div>
+            </div>
+          </label>
+          <label for="slide5" id="slide5">
+            <div class="content">
+              <h1>درباره ما</h1>
+              <div class="icon">
+                از کیبورد برای حرکت اسلایدها می توانید استفاده کنید
+              </div>
+            </div>
+          </label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
